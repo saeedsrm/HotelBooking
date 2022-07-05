@@ -17,3 +17,10 @@ class Reservation(models.Model):
 
     def __str__(self):
         return self.Name
+
+
+class contactUs(models.Model):
+    name = models.CharField(max_length=150)
+    phone = models.IntegerField()
+    email = models.EmailField()
+    note = models.TextField()

@@ -12,3 +12,9 @@ class CommentAdmin(admin.ModelAdmin):
 class ReservationAdmin(admin.ModelAdmin):
     list_display = (
         'account', 'Date_Check_In', 'Date_Check_Out', 'number_person', 'Note')
+
+
+@admin.register(contactUs)
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = (
+        'name', 'phone', 'email', 'note')
