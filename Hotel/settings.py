@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # General use templates & template tags (should appear first)
+    'adminlte3',
+    # Optional: Django admin theme (must be before django.contrib.admin)
+    'adminlte3_theme',
     'home',
     'rooms',
     'django.contrib.admin',
@@ -118,11 +122,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS= [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 STATIC_ROOT= os.path.join(BASE_DIR, 'assets')
-MEDIA_URL= '/media/'
-Media_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL= '/media/'
+# Media_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
