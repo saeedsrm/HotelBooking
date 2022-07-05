@@ -12,3 +12,9 @@ class hotelAdmin(admin.ModelAdmin):
 class roomAdmin(admin.ModelAdmin):
     list_display = (
         'room_number', 'discription', 'cost', 'capacity', 'is_empty')
+
+
+@admin.register(gallery)
+class galleryAdmin(admin.ModelAdmin):
+    list_display = (
+        'photo', 'note')
