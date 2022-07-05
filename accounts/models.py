@@ -97,3 +97,8 @@ class Account(AbstractBaseUser):
         return self.admin
 
     objects = UserManager()
+
+
+
+class City(models.Model):
+    name=models.CharField(verbose_name="City", max_length=100)

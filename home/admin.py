@@ -1,6 +1,14 @@
 from django.contrib import admin
-from .models import Chambre,Catalogue,Testimonial
-# Register your models here.
-admin.site.register(Chambre)
-admin.site.register(Catalogue)
-admin.site.register(Testimonial)
+from home.models import *
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = (
+        'account', 'is_confirmed', 'note')
+
+
+@admin.register(Reservation)
+class ReservationAdmin(admin.ModelAdmin):
+    list_display = (
+        'account', 'Date_Check_In', 'Date_Check_Out', 'number_person', 'Note')
